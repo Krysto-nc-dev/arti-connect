@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root[data-theme="light"] {
+    --text: #0a010e;
+    --background: #fbf5fe;
+    --primary: #bb2bec;
+    --secondary: #c1f488;
+    --accent: #51f088;
+
+    --linear-primary-secondary: linear-gradient(#bb2bec, #c1f488);
+    --linear-primary-accent: linear-gradient(#bb2bec, #51f088);
+    --linear-secondary-accent: linear-gradient(#c1f488, #51f088);
+
+    --radial-primary-secondary: radial-gradient(#bb2bec, #c1f488);
+    --radial-primary-accent: radial-gradient(#bb2bec, #51f088);
+    --radial-secondary-accent: radial-gradient(#c1f488, #51f088);
+
+    --foreground: var(--text);
+    --card: var(--background);
+    --card-foreground: var(--text);
+    --popover: var(--background);
+    --popover-foreground: var(--text);
+    --muted: var(--secondary);
+    --muted-foreground: var(--text);
+    --destructive: var(--primary);
+    --destructive-foreground: var(--background);
+    --border: var(--background);
+    --input: var(--background);
+    --ring: var(--text);
+    --radius: 0.5rem;
+  }
+
+  :root[data-theme="dark"] {
+    --text: #fbf5fe;
+    --background: #0a010e;
+    --primary: #51f088;
+    --secondary: #c1f488;
+    --accent: #bb2bec;
+
+    --linear-primary-secondary: linear-gradient(#51f088, #c1f488);
+    --linear-primary-accent: linear-gradient(#51f088, #bb2bec);
+    --linear-secondary-accent: linear-gradient(#c1f488, #bb2bec);
+
+    --radial-primary-secondary: radial-gradient(#51f088, #c1f488);
+    --radial-primary-accent: radial-gradient(#51f088, #bb2bec);
+    --radial-secondary-accent: radial-gradient(#c1f488, #bb2bec);
+
+    --foreground: var(--text);
+    --card: var(--background);
+    --card-foreground: var(--text);
+    --popover: var(--background);
+    --popover-foreground: var(--text);
+    --muted: var(--secondary);
+    --muted-foreground: var(--text);
+    --destructive: var(--primary);
+    --destructive-foreground: var(--background);
+    --border: var(--background);
+    --input: var(--background);
+    --ring: var(--text);
+    --radius: 0.5rem;
+  }
+
+  .bg-background {
+    background-color: var(--background);
+  }
+  .text-foreground {
+    color: var(--foreground);
+  }
+  .border-border {
+    border-color: var(--border);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Roboto', sans-serif;
+  }
+}
+
+/* 
+.hero {
+  background-image: url('../../assets/images/home_hero.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20rem;
+} */
